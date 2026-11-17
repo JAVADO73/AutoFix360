@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Pedidos AutoFix</title>
+    <link rel="stylesheet" th:href="@{/css/styles.css}"/>
+</head>
+
+
+<body>
+    <!-- NAVBAR -->
+    <header>
+        <nav class="nav">
+            <div class="left">
+                <a th:href="@{/}">AutoFix</a>
+            </div>
+
+            <div class="right">
+                <a th:href="@{/login}">Long In</a>
+            </div>
+        </nav>
+    </header>
+
+    <aside class="sidebar">
+        <!-- Left Column -->
+        <div class="left">
+            <a th:href="@{/}"><img th:src="@{/images/AutoFixLOGO.jpeg}" alt="AutoFix" width="200" height="200"></a>
+        </div>
+
+        <!-- Right Column-->
+        <div class="right">
+            <h1>La mejor calidad en filtros</h1>
+
+        </div>
+
+    </aside>
+
+
+</body>
+</html>
