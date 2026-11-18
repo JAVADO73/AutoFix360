@@ -1,7 +1,7 @@
-package com.example.appcontaduria.service;
+package com.example.appGestionPedidos.service;
 
-import com.example.appcontaduria.data.User;
-import com.example.appcontaduria.repository.UserRepository;
+import com.example.appGestionPedidos.data.User;
+import com.example.appGestionPedidos.repository.UserRepository;
 import org.springframework.stereotype.Service;
 
 import java.util.Optional;

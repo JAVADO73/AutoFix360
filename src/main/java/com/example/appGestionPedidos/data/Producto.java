@@ -1,4 +1,4 @@
-package com.example.appcontaduria.data;
+package com.example.appGestionPedidos.data;
 
 import lombok.AllArgsConstructor;
 import lombok.Data;

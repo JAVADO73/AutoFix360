@@ -1,6 +1,6 @@
-package com.example.appcontaduria.controller;
+package com.example.appGestionPedidos.controller;
 
-import com.example.appcontaduria.data.User;
+import com.example.appGestionPedidos.data.User;
 import jakarta.servlet.http.HttpSession;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;

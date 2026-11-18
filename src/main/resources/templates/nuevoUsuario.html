@@ -5,8 +5,9 @@
     <title>Usuario Nuevo</title>
 </head>
 <body>
-    <h1>Registro</h1>
+    <h1>Registro Usuario</h1>
     <form th:action="@{/usuarios/nuevo}" method="post">
+        <p th:if="${error}" th:text="${error}"></p>
         <div>
             <label for="username">Usuario</label>
             <input type="text" id="username" name="username" placeholder="id" required>

@@ -1,11 +1,10 @@
-package com.example.appcontaduria.data;
+package com.example.appGestionPedidos.data;
 
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 
 import java.math.BigDecimal;
-import java.util.function.BiFunction;
 
 @Data
 @AllArgsConstructor

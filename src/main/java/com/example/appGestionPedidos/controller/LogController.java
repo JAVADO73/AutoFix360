@@ -1,4 +1,4 @@
-package com.example.appcontaduria.controller;
+package com.example.appGestionPedidos.controller;
 
 import jakarta.servlet.http.HttpSession;
 import lombok.extern.slf4j.Slf4j;
@@ -6,8 +6,8 @@ import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestParam;
-import com.example.appcontaduria.data.User;
-import com.example.appcontaduria.service.UserService;
+import com.example.appGestionPedidos.data.User;
+import com.example.appGestionPedidos.service.UserService;
 import org.springframework.ui.Model;
 
 
@@ -39,21 +39,6 @@ public class LogController {
         }
         session.setAttribute("user", encontrado.get());
         return "redirect:/userhome";
-    }
-
-    @GetMapping("/signUp")
-    public String getSignUp(){return "signUp";}
-
-    @PostMapping("/signUp")
-    public String signUp (String username, String password, Model model){
-
-        Optional<User> encontrado = userService.findByUsername(username);
-        if (encontrado.isPresent()){
-            model.addAttribute("errorYaExiste", "yaRegistrado");
-            return "redurect:/home";
-        }
-        return "signUp";
-
     }
 
 

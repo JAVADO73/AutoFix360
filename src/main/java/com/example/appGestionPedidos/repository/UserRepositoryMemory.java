@@ -1,6 +1,6 @@
-package com.example.appcontaduria.repository;
+package com.example.appGestionPedidos.repository;
 
-import com.example.appcontaduria.data.User;
+import com.example.appGestionPedidos.data.User;
 import org.springframework.stereotype.Repository;
 
 import java.util.HashMap;
