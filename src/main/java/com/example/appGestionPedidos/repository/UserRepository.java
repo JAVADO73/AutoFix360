@@ -1,15 +1,10 @@
 package com.example.appGestionPedidos.repository;
 
 import com.example.appGestionPedidos.data.User;
-import org.springframework.stereotype.Repository;
+import org.springframework.data.repository.ListCrudRepository;
 
 import java.util.Optional;
 
-@Repository
-public interface UserRepository {
-    //unico
-    Optional<User> findByUsername(String userName);
-
-    User save(User user);
-
+public interface UserRepository extends ListCrudRepository<User, Long> {
+    Optional<User>findByUsername(String username);
 }

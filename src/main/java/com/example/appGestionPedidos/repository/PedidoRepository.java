@@ -1,5 +1,6 @@
 package com.example.appGestionPedidos.repository;
 
-import com.example.appGestionPedidos.data.Producto;
+import com.example.appGestionPedidos.data.Pedido;
+import org.springframework.data.repository.ListCrudRepository;
 
-//public interface PedidoRepository extends CrudRepository<Product, Long> { }
+public interface PedidoRepository extends ListCrudRepository<Pedido, Long> { }
