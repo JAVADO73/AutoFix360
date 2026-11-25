@@ -1,16 +1,36 @@
 <!DOCTYPE html>
-<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<html lang="es" xmlns:th="http://www.thymeleaf.org">
 <head>
     <meta charset="UTF-8">
-    <title>userhome</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AutoFix360 | Panel de usuario</title>
+    <link rel="stylesheet" th:href="@{/css/styles.css}">
 </head>
 <body>
-    <h1 th:text="${user.name}">Nombre</h1>
-    <p th:text="${user.rol}">Rol</p>
-
-    <a th:href="@{/usuarios/nuevo}">Crear Usuario</a>
-    <a th:href="@{/logout}">Log Out</a>
-
-    <a th:href="@{/productos/nuevo}">Registrar Producto</a>
+<header class="site-header">
+    <nav class="navbar container">
+        <a class="brand" th:href="@{/}"><img th:src="@{/images/AutoFixLOGO.jpeg}" alt="Logo AutoFix360"><span>AutoFix<span class="brand-accent">360</span></span></a>
+        <div class="nav-links"><a class="nav-link" th:href="@{/}">Inicio</a><a class="nav-link" th:href="@{/logout}">Cerrar sesión</a></div>
+    </nav>
+</header>
+<main class="container page-main">
+    <section class="dashboard-welcome">
+        <div><span class="eyebrow">PANEL DE CONTROL</span><h1>¡Hola, <span th:text="${user.name}">Nombre</span>!</h1><p>Bienvenido al área de administración de AutoFix360.</p></div>
+        <div class="role-chip"><span class="status-dot"></span><span th:text="${user.rol}">Rol</span></div>
+    </section>
+    <h2 class="section-title">Accesos rápidos</h2>
+    <section class="action-grid">
+        <a class="action-card" th:href="@{/productos/nuevo}">
+            <span class="action-icon">＋</span><h3>Registrar producto</h3><p>Agrega un nuevo producto al catálogo.</p><span class="card-arrow">→</span>
+        </a>
+        <a class="action-card" th:href="@{/usuarios/nuevo}">
+            <span class="action-icon">♙</span><h3>Crear usuario</h3><p>Registra una nueva cuenta de usuario.</p><span class="card-arrow">→</span>
+        </a>
+        <a class="action-card" th:href="@{/productos}">
+            <span class="action-icon">▤</span><h3>Ver productos</h3><p>Consulta el catálogo de productos.</p><span class="card-arrow">→</span>
+        </a>
+    </section>
+</main>
+<footer class="site-footer"><div class="container">AutoFix360 · Sistema de gestión</div></footer>
 </body>
 </html>
